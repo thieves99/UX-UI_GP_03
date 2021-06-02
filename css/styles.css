@@ -1,68 +1,107 @@
 body {
-    background: linear-gradient(180deg, #FFFFFF 17.59%, #1e46c0c4 80.61%);;
-    font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #FFFFFF 17.59%, #1e46c0c4 80.61%);
+    font-family: "Merriweather San", sans-serif;
+}
+.mapPage {
+  background: linear-gradient(180deg, #FFFFFF 13.42%, #3254BD 87.9%);
+  font-family: "Merriweather San", sans-serif;
+}
+.weatherPage {
+  background: linear-gradient(180deg, #FFFFFF 13.42%, #E59C65 84.78%);
+  font-family: "Merriweather San", sans-serif;
 }
 .navbar {
-    width: 100%;
+    width: 95%;
     background: transparent !important;
-  }
+}
+.navbar-toggler-icon {
+  background-color: #ffffff3d;
+}
+
 .nav-link {
-  font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-style: italic bold;
   font-size: 30px;
   text-align: center;
   }
-#navbarCollapse {
-  width: 200px;
+.navbar-nav {
+  width: 180px;
   height: 80px;
   z-index: 1;
 }
 .nav-map {
   background: #d4dbf1;
-  font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+  font-family: "Merriweather San", sans-serif;
+  font-weight: 600;
   text-align: right;
 }
 .nav-weather {
   background: #f7e2d1;
-  font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+  font-family: "Merriweather San", sans-serif;
+  font-weight: 600;
   text-align: right;
 }
 .nav-safety {
-  background: #cec4b6;
-  font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+  background: #e69b63;
+  font-family: "Merriweather San", sans-serif;
+  font-weight: 600;
   text-align: right;
 }
 .nav-community {
-  background: #c3ad9b;
-  font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+  background: #a08065;
+  font-family: "Merriweather San", sans-serif;
+  font-weight: 600;
   text-align: right;
 }
-.jumbotron {
-  background-image: url("../img/bwca-hero.png");
+.jumbotron.homePage {
+  background-image: url("../img/bwca-full-hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: cover;
+  justify-content: center;
+  min-height: 300px;
+}
+.jumbotron.map-hero{
+  background-image: url("../img/map-hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
   justify-content: center;
-  height: 300px;
+  height: 400px;
+}
+.jumbotron.weather-hero{
+  background-image: url("../img/weather-hero.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  justify-content: center;
+  height: 400px;
 }
 h1 {
   font-size: 32px;
   text-align: center;
   margin: 8px;
-  font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+  font-family: "Merriweather San", sans-serif;
   color: black;
   }
 h3 {
-  font-family: "Merriweather San", Arial, Helvetica, sans-serif;
+  font-family: "Merriweather San", sans-serif;
   font-style: italic;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   color: #000000;
 }
+h4 {
+  font-size: 16px;
+  font-style: italic;
+}
 .map {
-  width: 180px;
+  min-width: 170px;
   height: 170px;
-  margin: 5px auto;
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -70,19 +109,17 @@ h3 {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .weather {
-width: 180px;
-height: 170px;
-margin: 5px auto;
-justify-content: center;
-align-content: center;
-text-align: center;
-background: rgba(255, 161, 83, 0.8);
-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  min-width: 170px;
+  height: 170px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background: #FFA153;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .safety {
-  width: 180px;
+  min-width: 170px;
   height: 170px;
-  margin: 5px auto;
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -90,13 +127,12 @@ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .community {
-  width: 180px;
+  min-width: 170px;
   height: 170px;
-  margin: 5px auto;
   justify-content: center;
   align-content: center;
   text-align: center;
-  background: rgba(185, 140, 91, 0.8);
+  background: #B98C5B;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #map {
@@ -143,7 +179,7 @@ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   list-style-type: none;
 }
 .footerLink {
-  font-family: "Merriweather San", Arial, sans-serif;
+  font-family: "Merriweather San", sans-serif;
   margin-left: 20px;
   font-style: italic;
   color: black;
@@ -173,4 +209,38 @@ ul.bus__list li {
 }
 .icon {
   width: 30px;
+}
+.pageName {
+  display: flex;
+  margin: 135px auto;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  text-align: center;
+}
+.expand {
+  display: flex;
+  margin: auto;
+  align-content: flex-end !important;
+  justify-content: flex-end !important;
+}
+.CW {
+  background-color: #ffffffa6;
+  margin: 5px;
+}
+.label {
+  margin: 1px 0px 0px 5px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 14px;
+}
+.label2 {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "Merriweather Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
 }
